@@ -1,19 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Xing</title>
-  
+  <title>炎木的博客</title>
+  <subtitle>无花无酒锄作田</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amroll.github.io/"/>
-  <updated>2016-06-13T08:48:49.357Z</updated>
+  <updated>2016-06-15T03:36:57.338Z</updated>
   <id>http://amroll.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Amroll</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TEST</title>
+    <link href="http://amroll.github.io/2016/06/14/TEST/"/>
+    <id>http://amroll.github.io/2016/06/14/TEST/</id>
+    <published>2016-06-14T03:26:19.000Z</published>
+    <updated>2016-06-15T03:36:57.338Z</updated>
+    
+    <content type="html">&lt;p&gt;Hello World!&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;text-danger&quot;&gt;Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;  这个是什么？&lt;/div&gt;
+&lt;p&gt;哈哈哈哈&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;12312&quot;&gt;&lt;a href=&quot;#12312&quot; class=&quot;headerlink&quot; title=&quot;12312&quot;&gt;&lt;/a&gt;12312&lt;/h2&gt;&lt;p&gt;comments: false&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hello World!&lt;br&gt;&lt;p class=&quot;text-danger&quot;&gt;Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;&lt;/p&gt;
+&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;  这个是什么？&lt;/div&gt;
+&lt;p&gt;哈哈哈哈&lt;br&gt;
+    
+    </summary>
+    
+      <category term="hello" scheme="http://amroll.github.io/categories/hello/"/>
+    
+    
+      <category term="test" scheme="http://amroll.github.io/tags/test/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
