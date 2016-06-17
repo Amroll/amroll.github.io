@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amroll.github.io/"/>
-  <updated>2016-06-15T05:37:42.440Z</updated>
+  <updated>2016-06-17T08:05:14.287Z</updated>
   <id>http://amroll.github.io/</id>
   
   <author>
@@ -16,30 +16,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>TEST</title>
+    <title>开篇</title>
     <link href="http://amroll.github.io/2016/06/14/TEST/"/>
     <id>http://amroll.github.io/2016/06/14/TEST/</id>
     <published>2016-06-14T03:26:19.000Z</published>
-    <updated>2016-06-15T05:37:42.440Z</updated>
+    <updated>2016-06-17T08:05:14.287Z</updated>
     
-    <content type="html">&lt;p&gt;Hello World!&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;text-danger&quot;&gt;Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
-&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;  这个是什么？&lt;/div&gt;
-&lt;p&gt;哈哈哈哈&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;12312&quot;&gt;&lt;a href=&quot;#12312&quot; class=&quot;headerlink&quot; title=&quot;12312&quot;&gt;&lt;/a&gt;12312&lt;/h2&gt;&lt;p&gt;comments: false&lt;/p&gt;
+    <content type="html">&lt;h1 id=&quot;引子&quot;&gt;&lt;a href=&quot;#引子&quot; class=&quot;headerlink&quot; title=&quot;引子&quot;&gt;&lt;/a&gt;引子&lt;/h1&gt;&lt;p&gt;老早就想建一个基于Github Pages的博客了，一直没有行动。最近研究FFMpeg多了，天天上Github上找相关开源，找烦了就又回想到要建一博客记录一点东西。于是这个博客就被建了起来。&lt;/p&gt;
+&lt;h1 id=&quot;初识&quot;&gt;&lt;a href=&quot;#初识&quot; class=&quot;headerlink&quot; title=&quot;初识&quot;&gt;&lt;/a&gt;初识&lt;/h1&gt;&lt;p&gt;。。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;Hello World!&lt;br&gt;&lt;p class=&quot;text-danger&quot;&gt;Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;&lt;/p&gt;
-&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;  这个是什么？&lt;/div&gt;
-&lt;p&gt;哈哈哈哈&lt;br&gt;
+      &lt;h1 id=&quot;引子&quot;&gt;&lt;a href=&quot;#引子&quot; class=&quot;headerlink&quot; title=&quot;引子&quot;&gt;&lt;/a&gt;引子&lt;/h1&gt;&lt;p&gt;老早就想建一个基于Github Pages的博客了，一直没有行动。最近研究FFMpeg多了，天天上Github上找相关开源，找烦了就又回想到
     
     </summary>
     
-      <category term="hello" scheme="http://amroll.github.io/categories/hello/"/>
+      <category term="随笔" scheme="http://amroll.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="test" scheme="http://amroll.github.io/tags/test/"/>
+      <category term="随笔" scheme="http://amroll.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
