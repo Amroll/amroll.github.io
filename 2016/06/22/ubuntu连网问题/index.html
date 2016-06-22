@@ -6,34 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Ubuntu有线网连接不了 | 炎木的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。
-现象状态栏上的网络连接图标是无线连接没信号的图标，而不是正常的有线连接的图标。
-解决
-网线与网络端口用笔记本测试了一下，没有问题。
-用命令ifconfig -a查询网卡有一个enp3s0与lo两个设备，其中enp3s0为本机对应的物理网卡名。
-重启网络服务，没有反应
-1sudo service ne">
+  <meta name="description" content="问题昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu有线网连接不了">
 <meta property="og:url" content="http://amroll.github.io/2016/06/22/ubuntu连网问题/index.html">
 <meta property="og:site_name" content="炎木的博客">
-<meta property="og:description" content="问题昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。
-现象状态栏上的网络连接图标是无线连接没信号的图标，而不是正常的有线连接的图标。
-解决
-网线与网络端口用笔记本测试了一下，没有问题。
-用命令ifconfig -a查询网卡有一个enp3s0与lo两个设备，其中enp3s0为本机对应的物理网卡名。
-重启网络服务，没有反应
-1sudo service ne">
-<meta property="og:updated_time" content="2016-06-22T07:31:48.516Z">
+<meta property="og:description" content="问题昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。">
+<meta property="og:updated_time" content="2016-06-22T07:57:41.272Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu有线网连接不了">
-<meta name="twitter:description" content="问题昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。
-现象状态栏上的网络连接图标是无线连接没信号的图标，而不是正常的有线连接的图标。
-解决
-网线与网络端口用笔记本测试了一下，没有问题。
-用命令ifconfig -a查询网卡有一个enp3s0与lo两个设备，其中enp3s0为本机对应的物理网卡名。
-重启网络服务，没有反应
-1sudo service ne">
+<meta name="twitter:description" content="问题昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。">
   
     <link rel="alternative" href="/atom.xml" title="炎木的博客" type="application/atom+xml">
   
@@ -221,7 +203,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。</p>
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。<br><a id="more"></a></p>
 <h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>状态栏上的网络连接图标是无线连接没信号的图标，而不是正常的有线连接的图标。</p>
 <h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ol>
 <li>网线与网络端口用笔记本测试了一下，没有问题。</li>
@@ -229,11 +211,13 @@
 <li><p>重启网络服务，没有反应</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service network-manager restart</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>继续百度找到一个代码，输入之</p>
+<li><p>继续百度</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo sysctl <span class="built_in">net</span>.ipv4.conf.default.rp_filter=<span class="number">0</span></span><br><span class="line">sudo sysctl <span class="built_in">net</span>.ipv4.conf.all.rp_filter=<span class="number">0</span></span><br><span class="line">sudo sysctl <span class="built_in">net</span>.ipv4.ip_forward=<span class="number">1</span></span><br><span class="line">sudo sysctl <span class="built_in">net</span>.ipv6.conf.all.forwarding=<span class="number">1</span></span><br></pre></td></tr></table></figure>
 </li>
+<li><p>更改了<em>/etc/NetworkManager/NetworkManager.conf</em></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">managed=true</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<p>又更改了<em>/etc/NetworkManager/NetworkManager.conf</em><br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">managed=true</span><br></pre></td></tr></table></figure></p>
 <p>重启后，连接图标回来了。。。（不懂为什么）但还是上不了网。</p>
 <ol>
 <li>最后又找到了一个强制设置网卡的工作模式为100M全双工<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ethtool -s eth0 autoneg off speed <span class="number">100</span> duplex full</span><br><span class="line">sudo service network-manager restart</span><br></pre></td></tr></table></figure>

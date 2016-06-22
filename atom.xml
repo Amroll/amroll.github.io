@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amroll.github.io/"/>
-  <updated>2016-06-22T07:31:48.516Z</updated>
+  <updated>2016-06-22T07:57:41.272Z</updated>
   <id>http://amroll.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://amroll.github.io/2016/06/22/ubuntu%E8%BF%9E%E7%BD%91%E9%97%AE%E9%A2%98/"/>
     <id>http://amroll.github.io/2016/06/22/ubuntu连网问题/</id>
     <published>2016-06-22T07:01:00.000Z</published>
-    <updated>2016-06-22T07:31:48.516Z</updated>
+    <updated>2016-06-22T07:57:41.272Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。&lt;/p&gt;
+    <content type="html">&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;现象&quot;&gt;&lt;a href=&quot;#现象&quot; class=&quot;headerlink&quot; title=&quot;现象&quot;&gt;&lt;/a&gt;现象&lt;/h2&gt;&lt;p&gt;状态栏上的网络连接图标是无线连接没信号的图标，而不是正常的有线连接的图标。&lt;/p&gt;
 &lt;h2 id=&quot;解决&quot;&gt;&lt;a href=&quot;#解决&quot; class=&quot;headerlink&quot; title=&quot;解决&quot;&gt;&lt;/a&gt;解决&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;网线与网络端口用笔记本测试了一下，没有问题。&lt;/li&gt;
@@ -30,11 +30,13 @@
 &lt;li&gt;&lt;p&gt;重启网络服务，没有反应&lt;/p&gt;
 &lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo service network-manager restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;继续百度找到一个代码，输入之&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;继续百度&lt;/p&gt;
 &lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo sysctl &lt;span class=&quot;built_in&quot;&gt;net&lt;/span&gt;.ipv4.conf.default.rp_filter=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo sysctl &lt;span class=&quot;built_in&quot;&gt;net&lt;/span&gt;.ipv4.conf.all.rp_filter=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo sysctl &lt;span class=&quot;built_in&quot;&gt;net&lt;/span&gt;.ipv4.ip_forward=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo sysctl &lt;span class=&quot;built_in&quot;&gt;net&lt;/span&gt;.ipv6.conf.all.forwarding=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;p&gt;更改了&lt;em&gt;/etc/NetworkManager/NetworkManager.conf&lt;/em&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;managed=true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;又更改了&lt;em&gt;/etc/NetworkManager/NetworkManager.conf&lt;/em&gt;&lt;br&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;managed=true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;重启后，连接图标回来了。。。（不懂为什么）但还是上不了网。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;最后又找到了一个强制设置网卡的工作模式为100M全双工&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo ethtool -s eth0 autoneg off speed &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt; duplex full&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;sudo service network-manager restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -45,8 +47,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。&lt;/p&gt;
-&lt;h2 id=&quot;现象&quot;&gt;&lt;a hre
+      &lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。&lt;br&gt;
     
     </summary>
     
