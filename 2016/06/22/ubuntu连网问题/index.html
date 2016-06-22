@@ -4,21 +4,36 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>开篇 | 炎木的博客</title>
+  <title>Ubuntu有线网连接不了 | 炎木的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="引子老早就想建一个基于Github Pages的博客了，一直没有行动。最近研究FFMpeg多了，天天上Github上找相关开源，找烦了就又回想到要建一博客记录一点东西。于是这个博客就被建了起来。
-初识。。">
+  <meta name="description" content="问题昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。
+现象状态栏上的网络连接图标是无线连接没信号的图标，而不是正常的有线连接的图标。
+解决
+网线与网络端口用笔记本测试了一下，没有问题。
+用命令ifconfig -a查询网卡有一个enp3s0与lo两个设备，其中enp3s0为本机对应的物理网卡名。
+重启网络服务，没有反应
+1sudo service ne">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开篇">
-<meta property="og:url" content="http://amroll.github.io/2016/06/14/TEST/index.html">
+<meta property="og:title" content="Ubuntu有线网连接不了">
+<meta property="og:url" content="http://amroll.github.io/2016/06/22/ubuntu连网问题/index.html">
 <meta property="og:site_name" content="炎木的博客">
-<meta property="og:description" content="引子老早就想建一个基于Github Pages的博客了，一直没有行动。最近研究FFMpeg多了，天天上Github上找相关开源，找烦了就又回想到要建一博客记录一点东西。于是这个博客就被建了起来。
-初识。。">
-<meta property="og:updated_time" content="2016-06-17T08:05:14.287Z">
+<meta property="og:description" content="问题昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。
+现象状态栏上的网络连接图标是无线连接没信号的图标，而不是正常的有线连接的图标。
+解决
+网线与网络端口用笔记本测试了一下，没有问题。
+用命令ifconfig -a查询网卡有一个enp3s0与lo两个设备，其中enp3s0为本机对应的物理网卡名。
+重启网络服务，没有反应
+1sudo service ne">
+<meta property="og:updated_time" content="2016-06-22T07:31:48.516Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开篇">
-<meta name="twitter:description" content="引子老早就想建一个基于Github Pages的博客了，一直没有行动。最近研究FFMpeg多了，天天上Github上找相关开源，找烦了就又回想到要建一博客记录一点东西。于是这个博客就被建了起来。
-初识。。">
+<meta name="twitter:title" content="Ubuntu有线网连接不了">
+<meta name="twitter:description" content="问题昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。
+现象状态栏上的网络连接图标是无线连接没信号的图标，而不是正常的有线连接的图标。
+解决
+网线与网络端口用笔记本测试了一下，没有问题。
+用命令ifconfig -a查询网卡有一个enp3s0与lo两个设备，其中enp3s0为本机对应的物理网卡名。
+重启网络服务，没有反应
+1sudo service ne">
   
     <link rel="alternative" href="/atom.xml" title="炎木的博客" type="application/atom+xml">
   
@@ -165,11 +180,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-TEST" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ubuntu连网问题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/14/TEST/" class="article-date">
-  	<time datetime="2016-06-14T03:26:19.000Z" itemprop="datePublished">2016-06-14</time>
+      <a href="/2016/06/22/ubuntu连网问题/" class="article-date">
+  	<time datetime="2016-06-22T07:01:00.000Z" itemprop="datePublished">2016-06-22</time>
 </a>
     </div>
   
@@ -182,7 +197,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      开篇
+      Ubuntu有线网连接不了
     </h1>
   
 
@@ -191,12 +206,12 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工作笔记/">工作笔记</a></li></ul>
 	</div>
 
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/随笔/">随笔</a>
+	<a class="article-category-link" href="/categories/工作笔记/">工作笔记</a>
 	</div>
 
 
@@ -206,8 +221,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h1><p>老早就想建一个基于Github Pages的博客了，一直没有行动。最近研究FFMpeg多了，天天上Github上找相关开源，找烦了就又回想到要建一博客记录一点东西。于是这个博客就被建了起来。</p>
-<h1 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h1><p>。。</p>
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>昨天把UBUNTU的服务器换了一个地方，相对的也换了一个网口。重新开机之后发现网络连接不通了。</p>
+<h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>状态栏上的网络连接图标是无线连接没信号的图标，而不是正常的有线连接的图标。</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><ol>
+<li>网线与网络端口用笔记本测试了一下，没有问题。</li>
+<li>用命令<em>ifconfig -a</em>查询网卡有一个<em>enp3s0</em>与<em>lo</em>两个设备，其中<em>enp3s0</em>为本机对应的物理网卡名。</li>
+<li><p>重启网络服务，没有反应</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service network-manager restart</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>继续百度找到一个代码，输入之</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo sysctl <span class="built_in">net</span>.ipv4.conf.default.rp_filter=<span class="number">0</span></span><br><span class="line">sudo sysctl <span class="built_in">net</span>.ipv4.conf.all.rp_filter=<span class="number">0</span></span><br><span class="line">sudo sysctl <span class="built_in">net</span>.ipv4.ip_forward=<span class="number">1</span></span><br><span class="line">sudo sysctl <span class="built_in">net</span>.ipv6.conf.all.forwarding=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>又更改了<em>/etc/NetworkManager/NetworkManager.conf</em><br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">managed=true</span><br></pre></td></tr></table></figure></p>
+<p>重启后，连接图标回来了。。。（不懂为什么）但还是上不了网。</p>
+<ol>
+<li>最后又找到了一个强制设置网卡的工作模式为100M全双工<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ethtool -s eth0 autoneg off speed <span class="number">100</span> duplex full</span><br><span class="line">sudo service network-manager restart</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这下可以上网了，只是重启系统后要再设置一次。<br>先这么解决了，后续有好办法再更新</p>
 
       
     </div>
@@ -217,15 +249,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/06/22/ubuntu连网问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Ubuntu有线网连接不了
-        
-      </div>
-    </a>
   
+    <a href="/2016/06/14/TEST/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">开篇</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -246,7 +274,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"开篇　| 炎木的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Ubuntu有线网连接不了　| 炎木的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -258,7 +286,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="TEST" data-title="开篇" data-url="http://amroll.github.io/2016/06/14/TEST/"></div>
+	<div class="ds-thread" data-thread-key="ubuntu连网问题" data-title="Ubuntu有线网连接不了" data-url="http://amroll.github.io/2016/06/22/ubuntu连网问题/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
