@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amroll.github.io/"/>
-  <updated>2016-06-22T07:57:41.272Z</updated>
+  <updated>2016-06-27T09:32:14.588Z</updated>
   <id>http://amroll.github.io/</id>
   
   <author>
@@ -14,6 +14,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C#获取硬件信息</title>
+    <link href="http://amroll.github.io/2016/06/27/csGetHardWareID/"/>
+    <id>http://amroll.github.io/2016/06/27/csGetHardWareID/</id>
+    <published>2016-06-27T06:47:08.000Z</published>
+    <updated>2016-06-27T09:32:14.588Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;CS下获取硬件的信息用作软件绑定&quot;&gt;&lt;a href=&quot;#CS下获取硬件的信息用作软件绑定&quot; class=&quot;headerlink&quot; title=&quot;CS下获取硬件的信息用作软件绑定&quot;&gt;&lt;/a&gt;CS下获取硬件的信息用作软件绑定&lt;/h2&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;获取CPU序列号&quot;&gt;&lt;a href=&quot;#获取CPU序列号&quot; class=&quot;headerlink&quot; title=&quot;获取CPU序列号&quot;&gt;&lt;/a&gt;获取CPU序列号&lt;/h3&gt;&lt;figure class=&quot;highlight cs&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;GetCPUID&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt; strRtn = &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ManagementClass mc = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ManagementClass(&lt;span class=&quot;string&quot;&gt;&quot;Win32_Processor&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ManagementObjectCollection moc = mc.GetInstances();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//moc.Count CPU的个数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;foreach&lt;/span&gt;(ManagementObject mo &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; moc)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;span class=&quot;comment&quot;&gt;//获取第一个CPU的序列号&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        strRtn=mo.Properties[&lt;span class=&quot;string&quot;&gt;&quot;ProcessorId&quot;&lt;/span&gt;].Value.ToString();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; strRtn;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;对应在WINDOWS下CMD的命令为：&lt;br&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wmic CPU ge ProcessorId&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;获取硬盘序列号&quot;&gt;&lt;a href=&quot;#获取硬盘序列号&quot; class=&quot;headerlink&quot; title=&quot;获取硬盘序列号&quot;&gt;&lt;/a&gt;获取硬盘序列号&lt;/h3&gt;&lt;figure class=&quot;highlight cs&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;GetDiskDriverID&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt; strRtn=&lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ManagementObjectSearcher mos=&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ManagementObjectSearcher();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    mos.Query=&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; SelectQuery(&lt;span class=&quot;string&quot;&gt;&quot;Win32_DiskDrive&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;,&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt;[] &amp;#123;&lt;span class=&quot;string&quot;&gt;&quot;PNPDeviceID&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Signature&quot;&lt;/span&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ManagementObjectCollection moc=mos.Get();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;foreach&lt;/span&gt;(ManagementObject mo &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; moc)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//获取第一块硬盘的序列号&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;//调试时获取的是十进制的数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        strRtn=mo.Properties[&lt;span class=&quot;string&quot;&gt;&quot;signature&quot;&lt;/span&gt;].Value.ToString().Trim();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; strRtn;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;对应在WINDOWS下CMD获取硬盘ID为：&lt;br&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;diskpart&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;&amp;gt; list disk        //查看总硬盘数&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;&amp;gt; select disk &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;    //选择第一块硬盘&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;&amp;gt; detail disk      //显示硬盘的详细信息，其中第&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;行的ID为硬盘序列号&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;CS下获取硬件的信息用作软件绑定&quot;&gt;&lt;a href=&quot;#CS下获取硬件的信息用作软件绑定&quot; class=&quot;headerlink&quot; title=&quot;CS下获取硬件的信息用作软件绑定&quot;&gt;&lt;/a&gt;CS下获取硬件的信息用作软件绑定&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="C#" scheme="http://amroll.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FFMpeg(一)</title>
+    <link href="http://amroll.github.io/2016/06/23/FFMpeg1/"/>
+    <id>http://amroll.github.io/2016/06/23/FFMpeg1/</id>
+    <published>2016-06-23T07:16:00.000Z</published>
+    <updated>2016-06-23T07:21:17.574Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;av-register-all&quot;&gt;&lt;a href=&quot;#av-register-all&quot; class=&quot;headerlink&quot; title=&quot;av_register_all()&quot;&gt;&lt;/a&gt;av_register_all()&lt;/h1&gt;&lt;p&gt;此函数注册了所有的文件格式和编解码器的库。只需调用一次。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;av-register-all&quot;&gt;&lt;a href=&quot;#av-register-all&quot; class=&quot;headerlink&quot; title=&quot;av_register_all()&quot;&gt;&lt;/a&gt;av_register_all()&lt;/h1&gt;&lt;p&gt;此函数注册了所有的文件格式和
+    
+    </summary>
+    
+      <category term="钻研" scheme="http://amroll.github.io/categories/%E9%92%BB%E7%A0%94/"/>
+    
+    
+      <category term="ffmpeg" scheme="http://amroll.github.io/tags/ffmpeg/"/>
+    
+  </entry>
   
   <entry>
     <title>Ubuntu有线网连接不了</title>
