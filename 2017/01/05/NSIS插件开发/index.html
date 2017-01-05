@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>关于&amp;帮助 | 炎木的博客</title>
+  <title>NSIS插件开发(1) | 炎木的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="欢迎来到我的泥塘Hello World!  介绍部分以后慢慢填  
-恩，先这样挺好这个是超链接">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于&帮助">
-<meta property="og:url" content="http://amroll.github.io/about/index.html">
+  <meta name="description" content="写在前面本列系主要说NSIS插件上开发的一些事情，主要是本人自己在开发的过程中碰到的一些问题的解决。
+NSISNSIS(Nullsoft Scriptable Install System)是一个开源的 Windows 系统下安装程序制作程序。它提供了安装、卸载、系统设置、文件解压缩等功能。这如其名字所指出的那样，NSIS 是通过它的脚本语言来描述安装程序的行为和逻辑的。NSIS 的脚本语言和通常">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NSIS插件开发(1)">
+<meta property="og:url" content="http://amroll.github.io/2017/01/05/NSIS插件开发/index.html">
 <meta property="og:site_name" content="炎木的博客">
-<meta property="og:description" content="欢迎来到我的泥塘Hello World!  介绍部分以后慢慢填  
-恩，先这样挺好这个是超链接">
-<meta property="og:updated_time" content="2016-06-17T08:16:36.773Z">
+<meta property="og:description" content="写在前面本列系主要说NSIS插件上开发的一些事情，主要是本人自己在开发的过程中碰到的一些问题的解决。
+NSISNSIS(Nullsoft Scriptable Install System)是一个开源的 Windows 系统下安装程序制作程序。它提供了安装、卸载、系统设置、文件解压缩等功能。这如其名字所指出的那样，NSIS 是通过它的脚本语言来描述安装程序的行为和逻辑的。NSIS 的脚本语言和通常">
+<meta property="og:updated_time" content="2017-01-05T09:44:21.802Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于&帮助">
-<meta name="twitter:description" content="欢迎来到我的泥塘Hello World!  介绍部分以后慢慢填  
-恩，先这样挺好这个是超链接">
+<meta name="twitter:title" content="NSIS插件开发(1)">
+<meta name="twitter:description" content="写在前面本列系主要说NSIS插件上开发的一些事情，主要是本人自己在开发的过程中碰到的一些问题的解决。
+NSISNSIS(Nullsoft Scriptable Install System)是一个开源的 Windows 系统下安装程序制作程序。它提供了安装、卸载、系统设置、文件解压缩等功能。这如其名字所指出的那样，NSIS 是通过它的脚本语言来描述安装程序的行为和逻辑的。NSIS 的脚本语言和通常">
   
     <link rel="alternative" href="/atom.xml" title="炎木的博客" type="application/atom+xml">
   
@@ -165,11 +165,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-NSIS插件开发" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/about/index.html" class="article-date">
-  	<time datetime="2016-06-14T05:46:19.000Z" itemprop="datePublished">2016-06-14</time>
+      <a href="/2017/01/05/NSIS插件开发/" class="article-date">
+  	<time datetime="2017-01-05T09:24:39.000Z" itemprop="datePublished">2017-01-05</time>
 </a>
     </div>
   
@@ -182,7 +182,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      关于&amp;帮助
+      NSIS插件开发(1)
     </h1>
   
 
@@ -190,7 +190,15 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NSIS-NSIS-Plugin/">NSIS,NSIS Plugin</a></li></ul>
+	</div>
+
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/NSIS/">NSIS</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -198,8 +206,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="欢迎来到我的泥塘"><a href="#欢迎来到我的泥塘" class="headerlink" title="欢迎来到我的泥塘"></a>欢迎来到我的泥塘</h1><p>Hello World!<br><div class="alert alert-success"><i class="fa fa-lightbulb-o"></i>  介绍部分以后慢慢填</div>  </p>
-<p>恩，先这样挺好<br><a href="http://baidu.com" target="_blank" rel="external"><span class="label label-default">这个是超链接</span></a></p>
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>本列系主要说NSIS插件上开发的一些事情，主要是本人自己在开发的过程中碰到的一些问题的解决。</p>
+<h1 id="NSIS"><a href="#NSIS" class="headerlink" title="NSIS"></a>NSIS</h1><p><a href="http://nsis.sourceforge.net/" target="_blank" rel="external">NSIS</a>(Nullsoft Scriptable Install System)是一个开源的 Windows 系统下安装程序制作程序。它提供了安装、卸载、系统设置、文件解压缩等功能。这如其名字所指出的那样，NSIS 是通过它的脚本语言来描述安装程序的行为和逻辑的。NSIS 的脚本语言和通常的编程语言有类似的结构和语法，但它是为安装程序这类应用所设计的。</p>
+<h1 id="开发准备"><a href="#开发准备" class="headerlink" title="开发准备"></a>开发准备</h1><h2 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h2><p>本人用的是Visual Studio 2015 Communtiy。</p>
+<h2 id="头文件与库"><a href="#头文件与库" class="headerlink" title="头文件与库"></a>头文件与库</h2><p>先安装完NSIS后，在安装目录下<code>/Examples/Plugin/nsis</code>文件夹下<code>api.h, nsis_tchar.h, pluginapi.h, pluginapi-x86-ansi.lib, pluginapi-x86-unicode.lib</code>都为开发需求文件。</p>
+<h1 id="一步一步"><a href="#一步一步" class="headerlink" title="一步一步"></a>一步一步</h1><ol>
+<li>新建项目</li>
+<li>设置<code>项目-&gt;属性-&gt;C/C++-&gt;代码生成-&gt;运行库</code>这一项时，在DEBUG模式下为<code>多线程调试(/MTd)</code>，在RELEASE模式下为<code>多线程(/MT)</code></li>
+</ol>
 
       
     </div>
@@ -207,6 +221,16 @@
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/2016/09/29/IWB-CFF-学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">IWB/CFF 学习笔记</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
@@ -224,7 +248,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"关于&帮助　| 炎木的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"NSIS插件开发(1)　| 炎木的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -236,7 +260,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="undefined" data-title="关于&amp;帮助" data-url="http://amroll.github.io/about/index.html"></div>
+	<div class="ds-thread" data-thread-key="NSIS插件开发" data-title="NSIS插件开发(1)" data-url="http://amroll.github.io/2017/01/05/NSIS插件开发/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -280,7 +304,7 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

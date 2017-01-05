@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amroll.github.io/"/>
-  <updated>2016-06-27T09:32:14.588Z</updated>
+  <updated>2017-01-05T09:44:21.802Z</updated>
   <id>http://amroll.github.io/</id>
   
   <author>
@@ -16,11 +16,84 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>NSIS插件开发(1)</title>
+    <link href="http://amroll.github.io/2017/01/05/NSIS%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    <id>http://amroll.github.io/2017/01/05/NSIS插件开发/</id>
+    <published>2017-01-05T09:24:39.000Z</published>
+    <updated>2017-01-05T09:44:21.802Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;本列系主要说NSIS插件上开发的一些事情，主要是本人自己在开发的过程中碰到的一些问题的解决。&lt;/p&gt;
+&lt;h1 id=&quot;NSIS&quot;&gt;&lt;a href=&quot;#NSIS&quot; class=&quot;headerlink&quot; title=&quot;NSIS&quot;&gt;&lt;/a&gt;NSIS&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://nsis.sourceforge.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;NSIS&lt;/a&gt;(Nullsoft Scriptable Install System)是一个开源的 Windows 系统下安装程序制作程序。它提供了安装、卸载、系统设置、文件解压缩等功能。这如其名字所指出的那样，NSIS 是通过它的脚本语言来描述安装程序的行为和逻辑的。NSIS 的脚本语言和通常的编程语言有类似的结构和语法，但它是为安装程序这类应用所设计的。&lt;/p&gt;
+&lt;h1 id=&quot;开发准备&quot;&gt;&lt;a href=&quot;#开发准备&quot; class=&quot;headerlink&quot; title=&quot;开发准备&quot;&gt;&lt;/a&gt;开发准备&lt;/h1&gt;&lt;h2 id=&quot;开发工具&quot;&gt;&lt;a href=&quot;#开发工具&quot; class=&quot;headerlink&quot; title=&quot;开发工具&quot;&gt;&lt;/a&gt;开发工具&lt;/h2&gt;&lt;p&gt;本人用的是Visual Studio 2015 Communtiy。&lt;/p&gt;
+&lt;h2 id=&quot;头文件与库&quot;&gt;&lt;a href=&quot;#头文件与库&quot; class=&quot;headerlink&quot; title=&quot;头文件与库&quot;&gt;&lt;/a&gt;头文件与库&lt;/h2&gt;&lt;p&gt;先安装完NSIS后，在安装目录下&lt;code&gt;/Examples/Plugin/nsis&lt;/code&gt;文件夹下&lt;code&gt;api.h, nsis_tchar.h, pluginapi.h, pluginapi-x86-ansi.lib, pluginapi-x86-unicode.lib&lt;/code&gt;都为开发需求文件。&lt;/p&gt;
+&lt;h1 id=&quot;一步一步&quot;&gt;&lt;a href=&quot;#一步一步&quot; class=&quot;headerlink&quot; title=&quot;一步一步&quot;&gt;&lt;/a&gt;一步一步&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;新建项目&lt;/li&gt;
+&lt;li&gt;设置&lt;code&gt;项目-&amp;gt;属性-&amp;gt;C/C++-&amp;gt;代码生成-&amp;gt;运行库&lt;/code&gt;这一项时，在DEBUG模式下为&lt;code&gt;多线程调试(/MTd)&lt;/code&gt;，在RELEASE模式下为&lt;code&gt;多线程(/MT)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;本列系主要说NSIS插件上开发的一些事情，主要是本人自己在开发的过程中碰到的一些问题的解决。&lt;/p&gt;
+&lt;h1 id=&quot;NSI
+    
+    </summary>
+    
+      <category term="NSIS" scheme="http://amroll.github.io/categories/NSIS/"/>
+    
+    
+      <category term="NSIS,NSIS Plugin" scheme="http://amroll.github.io/tags/NSIS-NSIS-Plugin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IWB/CFF 学习笔记</title>
+    <link href="http://amroll.github.io/2016/09/29/IWB-CFF-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://amroll.github.io/2016/09/29/IWB-CFF-学习笔记/</id>
+    <published>2016-09-29T06:55:42.000Z</published>
+    <updated>2017-01-05T09:19:22.170Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;IWB-CFF&quot;&gt;&lt;a href=&quot;#IWB-CFF&quot; class=&quot;headerlink&quot; title=&quot;IWB/CFF&quot;&gt;&lt;/a&gt;IWB/CFF&lt;/h1&gt;&lt;p&gt;IWB : Interatactive Whiteboard File Format&lt;br&gt;CFF : Common File Format&lt;/p&gt;
+&lt;h1 id=&quot;名词解释&quot;&gt;&lt;a href=&quot;#名词解释&quot; class=&quot;headerlink&quot; title=&quot;名词解释&quot;&gt;&lt;/a&gt;名词解释&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;File&lt;/strong&gt; 电脑文件&lt;br&gt;&lt;strong&gt;Document&lt;/strong&gt; 文件包含多个页面&lt;br&gt;&lt;strong&gt;Page&lt;/strong&gt; elements放置的地方&lt;br&gt;&lt;strong&gt;Slide&lt;/strong&gt; Page显示的地方&lt;br&gt;&lt;strong&gt;Elements&lt;/strong&gt; Page上显示的对象&lt;br&gt;&lt;strong&gt;Reader&lt;/strong&gt; 程序打开文件&lt;br&gt;&lt;strong&gt;Writer&lt;/strong&gt; 保存&lt;br&gt;&lt;strong&gt;SVG&lt;/strong&gt; Scalar Vetor Graphics Format&lt;br&gt;&lt;strong&gt;SVGT&lt;/strong&gt; SVG Tiny specification  &lt;/p&gt;
+&lt;h1 id=&quot;引用&quot;&gt;&lt;a href=&quot;#引用&quot; class=&quot;headerlink&quot; title=&quot;引用&quot;&gt;&lt;/a&gt;引用&lt;/h1&gt;&lt;p&gt;XML 1.0 &lt;a href=&quot;http://www.w3.org/TR/REC-xml/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.w3.org/TR/REC-xml/&lt;/a&gt;&lt;br&gt;SVG 1.1 &lt;a href=&quot;http://www.w3.org/TR/SVG11/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.w3.org/TR/SVG11/&lt;/a&gt;&lt;br&gt;SVG 1.2 (draft) &lt;a href=&quot;http://www.w3.org/TR/2004/WD-SVG12-20041027/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.w3.org/TR/2004/WD-SVG12-20041027/&lt;/a&gt;&lt;br&gt;SVG Tiny 1.2 (draft) &lt;a href=&quot;http://www.w3.org/TR/SVGMobile12/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.w3.org/TR/SVGMobile12/&lt;/a&gt;&lt;br&gt;CSS2 &lt;a href=&quot;http://www.w3.org/TR/REC-CSS2/cover.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.w3.org/TR/REC-CSS2/cover.html&lt;/a&gt;  &lt;/p&gt;
+&lt;h1 id=&quot;文件格式&quot;&gt;&lt;a href=&quot;#文件格式&quot; class=&quot;headerlink&quot; title=&quot;文件格式&quot;&gt;&lt;/a&gt;文件格式&lt;/h1&gt;&lt;h3 id=&quot;后缀&quot;&gt;&lt;a href=&quot;#后缀&quot; class=&quot;headerlink&quot; title=&quot;后缀&quot;&gt;&lt;/a&gt;后缀&lt;/h3&gt;&lt;p&gt;IWB文件后缀&lt;code&gt;.iwb&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;主体&quot;&gt;&lt;a href=&quot;#主体&quot; class=&quot;headerlink&quot; title=&quot;主体&quot;&gt;&lt;/a&gt;主体&lt;/h3&gt;&lt;p&gt;IWB文件是一个ZIP的压缩文件。&lt;br&gt;注1： 如果IWB文件可以用XML完全的记录，那么ZIP可以只有一个XML文件，文件名为：&lt;code&gt;content.xml&lt;/code&gt;&lt;br&gt;注2： 如果不能用XML完全的描述，如：包含图片，视频等信息。那么这些文件也要一起打包进ZIP文件里面，同时也只有一个&lt;code&gt;content.xml&lt;/code&gt;文件来描述IWB的文档。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;IWB-CFF&quot;&gt;&lt;a href=&quot;#IWB-CFF&quot; class=&quot;headerlink&quot; title=&quot;IWB/CFF&quot;&gt;&lt;/a&gt;IWB/CFF&lt;/h1&gt;&lt;p&gt;IWB : Interatactive Whiteboard File Format&lt;br&gt;CFF 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>工作日志</title>
+    <link href="http://amroll.github.io/2016/07/20/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97/"/>
+    <id>http://amroll.github.io/2016/07/20/工作日志/</id>
+    <published>2016-07-20T01:24:43.000Z</published>
+    <updated>2016-07-20T03:54:27.508Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;StylusPlugInCollection&quot;&gt;&lt;a href=&quot;#StylusPlugInCollection&quot; class=&quot;headerlink&quot; title=&quot;StylusPlugInCollection&quot;&gt;&lt;/a&gt;StylusPlugInCollection&lt;/h1&gt;&lt;p&gt;触笔插件（自定义）合集&lt;/p&gt;
+&lt;h1 id=&quot;Mouse-Capture&quot;&gt;&lt;a href=&quot;#Mouse-Capture&quot; class=&quot;headerlink&quot; title=&quot;Mouse.Capture&quot;&gt;&lt;/a&gt;Mouse.Capture&lt;/h1&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;StylusPlugInCollection&quot;&gt;&lt;a href=&quot;#StylusPlugInCollection&quot; class=&quot;headerlink&quot; title=&quot;StylusPlugInCollection&quot;&gt;&lt;/a&gt;StylusPlugInCollecti
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>C#获取硬件信息</title>
     <link href="http://amroll.github.io/2016/06/27/csGetHardWareID/"/>
     <id>http://amroll.github.io/2016/06/27/csGetHardWareID/</id>
     <published>2016-06-27T06:47:08.000Z</published>
-    <updated>2016-06-27T09:32:14.588Z</updated>
+    <updated>2016-09-30T05:10:25.982Z</updated>
     
     <content type="html">&lt;h2 id=&quot;CS下获取硬件的信息用作软件绑定&quot;&gt;&lt;a href=&quot;#CS下获取硬件的信息用作软件绑定&quot; class=&quot;headerlink&quot; title=&quot;CS下获取硬件的信息用作软件绑定&quot;&gt;&lt;/a&gt;CS下获取硬件的信息用作软件绑定&lt;/h2&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h3 id=&quot;获取CPU序列号&quot;&gt;&lt;a href=&quot;#获取CPU序列号&quot; class=&quot;headerlink&quot; title=&quot;获取CPU序列号&quot;&gt;&lt;/a&gt;获取CPU序列号&lt;/h3&gt;&lt;figure class=&quot;highlight cs&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;GetCPUID&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt; strRtn = &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ManagementClass mc = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ManagementClass(&lt;span class=&quot;string&quot;&gt;&quot;Win32_Processor&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    ManagementObjectCollection moc = mc.GetInstances();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;//moc.Count CPU的个数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;foreach&lt;/span&gt;(ManagementObject mo &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; moc)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#123;&lt;span class=&quot;comment&quot;&gt;//获取第一个CPU的序列号&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        strRtn=mo.Properties[&lt;span class=&quot;string&quot;&gt;&quot;ProcessorId&quot;&lt;/span&gt;].Value.ToString();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; strRtn;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -120,38 +193,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;引子&quot;&gt;&lt;a href=&quot;#引子&quot; class=&quot;headerlink&quot; title=&quot;引子&quot;&gt;&lt;/a&gt;引子&lt;/h1&gt;&lt;p&gt;老早就想建一个基于Github Pages的博客了，一直没有行动。最近研究FFMpeg多了，天天上Github上找相关开源，找烦了就又回想到
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://amroll.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="随笔" scheme="http://amroll.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开篇</title>
-    <link href="http://amroll.github.io/2016/06/14/geitLisence/"/>
-    <id>http://amroll.github.io/2016/06/14/geitLisence/</id>
-    <published>2016-06-14T03:26:19.000Z</published>
-    <updated>2016-07-12T02:56:56.706Z</updated>
-    
-    <content type="html">&lt;h1 id=&quot;UBoardmate软件最终用户授权和许可协议&quot;&gt;&lt;a href=&quot;#UBoardmate软件最终用户授权和许可协议&quot; class=&quot;headerlink&quot; title=&quot;UBoardmate软件最终用户授权和许可协议&quot;&gt;&lt;/a&gt;UBoardmate软件最终用户授权和许可协议&lt;/h1&gt;&lt;p&gt;欢迎使用UBoardmate软件！&lt;/p&gt;
-&lt;h2 id=&quot;重要须知&quot;&gt;&lt;a href=&quot;#重要须知&quot; class=&quot;headerlink&quot; title=&quot;重要须知&quot;&gt;&lt;/a&gt;重要须知&lt;/h2&gt;&lt;p&gt;在此特别提醒用户务必仔细阅读、充分理解本《软件最终用户授权和许可协议》——用户应认真阅读、充分理解本《软件最终用户授权和许可协议》（下称《协议》）中各条款，包括免除或者限制UBoardmate软件责任的免责条款及对用户的权利限制条款。请您审阅并接受或不接受本《协议》（未成年人应在法定监护人陪同下审阅）。除非您接受本《协议》条款，否则您无权下载、安装或使用本软件及其相关服务，包括随附的计算机程序和任何有关本软件的后期发行或升级版本，并可能包括相关电子文档和印刷材料。您的安装使用行为将视为对本《协议》的接受，并同意接受本《协议》各项条款的约束。本《协议》与由您签署的通过谈判订立的任何书面协议一样有效。&lt;br&gt;本《协议》是用户与厦门冠尔信息科技有限公司（下称“冠尔信息”）之间关于用户下载、安装、使用、复制UBoardmate软件（以下简称“软件”）所订立的法律协议。本《协议》描述“冠尔信息”与用户之间关于“软件”许可使用及相关方面的权利义务。“用户”或“您”是指通过“冠尔信息”提供的获取软件授权的途径获得软件授权许可和/或软件产品的个人或单一实体。  &lt;/p&gt;
-&lt;h2 id=&quot;1-权利声明&quot;&gt;&lt;a href=&quot;#1-权利声明&quot; class=&quot;headerlink&quot; title=&quot;1 权利声明&quot;&gt;&lt;/a&gt;1 权利声明&lt;/h2&gt;&lt;p&gt;本“软件”由“冠尔信息”独立开发，其一切知识产权，以及与“软件”相关的所有信息内容，包括但不限于：文字表述及其组合、图标、图饰、图像、图表、色彩、界面设计、版面框架、有关数据、附加程序、印刷材料或电子文档等均为“冠尔信息”所有，受著作权法和国际著作权条约以及其他知识产权法律法规的保护。  &lt;/p&gt;
-&lt;h2 id=&quot;2-许可授权范围&quot;&gt;&lt;a href=&quot;#2-许可授权范围&quot; class=&quot;headerlink&quot; title=&quot;2 许可授权范围&quot;&gt;&lt;/a&gt;2 许可授权范围&lt;/h2&gt;&lt;p&gt;2.1 未注册版本软件可免费使用本“软件”，但无法使用本“软件”工具、手写识别和保存功能，必须购买本“软件”的注册码或软件安装在交互智能平板上才能完全使用。&lt;br&gt;2.2 用户可以在单一计算机（下统称“计算机”）上安装、使用、显示、运行本“软件”，且注册码只能用于一台计算机的一个“软件”。&lt;br&gt;2.3 为防止本“软件”损坏而制作备份复制品，这些备份复制品不得通过任何方式提供给他人使用，在您丧失该合法复制品的所有权时，必须负责将备份复制品销毁。&lt;br&gt;2.4 用户为了把本“软件”用于实际的计算机应用环境或者改进其功能、性能，可进行必要的修改；但是，除合同另有约定外，未经“冠尔信息”许可，不得向任何第三方提供修改后的“软件”。  &lt;/p&gt;
-&lt;h2 id=&quot;3-权利限制&quot;&gt;&lt;a href=&quot;#3-权利限制&quot; class=&quot;headerlink&quot; title=&quot;3 权利限制&quot;&gt;&lt;/a&gt;3 权利限制&lt;/h2&gt;&lt;p&gt;3.1 禁止反向工程、反向编译和反向汇编：用户不得对本“软件”产品进行反向工程（ReverseEngineer）、反向编译（Decompile）或反向汇编（Disassemble），同时不得改动编译在程序文件内部的任何资源。除法律、法规明文规定允许上述活动外，用户必须遵守此协议限制。&lt;br&gt;3.2 组件分割：本“软件”产品是作为一个单一产品而被授予许可使用，用户不得将各个部分分开用于任何目的。&lt;br&gt;3.3 个别授权：如需进行商业性的销售、复制、分发，包括但不限于软件销售、预装、捆绑等，必须获得“冠尔信息”的书面授权和许可。&lt;br&gt;3.4 保留权利：本《协议》未明示授权的其他一切权利仍归“冠尔信息”所有，用户使用其他权利时必须获得“冠尔信息”的书面同意。&lt;br&gt;3.5 除本《协议》有明确规定外，本《协议》并未对利用本“软件”访问的“冠尔信息”的其他服务规定相关的服务条款，对于这些服务可能有单独的服务条款加以规范，请用户在使用有关服务时另行了解与确认。如用户使用该服务，视为对相关服务条款的接受。  &lt;/p&gt;
-&lt;h2 id=&quot;4-用户使用须知&quot;&gt;&lt;a href=&quot;#4-用户使用须知&quot; class=&quot;headerlink&quot; title=&quot;4 用户使用须知&quot;&gt;&lt;/a&gt;4 用户使用须知&lt;/h2&gt;&lt;p&gt;4.1 软件功能：本“软件”是一款基于触摸一体机的多媒体交互式白板软件。&lt;br&gt;    4.1.1 本“软件”包含书写、擦除、批注、绘图、文字录入、小工具、多媒体播放、文件、网页链接和资源库等功能；&lt;br&gt;    4.1.2 为了让用户能方便地安装和使用本“软件”，本“软件”中提供相应的帮助文档；为了及时更新软件信息，本“软件”提供在线升级功能。&lt;br&gt;4.2 本“软件”仅适用于其帮助文档里公布支持的操作系统。如果用户在安装本“软件”后因任何原因欲放弃使用，可直接卸载或删除“软件”(UBoardmate.apk)。&lt;br&gt;4.3 本“软件”由“冠尔信息”提供产品支持。&lt;br&gt;4.4 软件的修改和升级：“冠尔信息”保留随时为用户提供本“软件”的修改、升级版本的权利。&lt;br&gt;4.5 用户应在遵守法律及本协议的前提下使用本“软件”，用户无权实施包括但不限于下列行为：&lt;br&gt;    4.5.1 不得删除或者改变本“软件”及其他副本上的所有关于版权的信息、内容；&lt;br&gt;    4.5.2 不得故意避开或者破坏著作权人为保护本“软件”著作权而采取的技术措施；&lt;br&gt;    4.5.3 用户不得利用本“软件”误导、欺骗他人；&lt;br&gt;    4.5.4 不得违反国家规定，对计算机信息系统功能进行删除、修改、增加、干扰，造成计算机信息系统不能正常运行；&lt;br&gt;    4.5.5 不得未经允许，进入计算机信息网络或者使用计算机信息网络资源；&lt;br&gt;    4.5.6 不得未经允许，对计算机信息网络功能进行删除、修改或者增加的；&lt;br&gt;    4.5.7 对于本“软件”相关信息等，未经“冠尔信息”书面同意，用户不得擅自实施包括但不限于下列行为：使用、出租、出借、复制、修改、链接、转载、汇编、发表、出版，建立镜像站点、擅自借助本“软件”发展与之有关的衍生产品、作品、服务、插件、外挂、兼容、互联等；&lt;br&gt;    4.5.8 用户不得破坏本“软件”系统或网站的正常运行，故意传播计算机病毒等破坏性程序；&lt;br&gt;    4.5.9 用户不得利用本“软件”发表、传送、传播、储存违反国家法律、危害国家安全、祖国统一、社会稳定、公序良俗的内容，或任何不当的、侮辱诽谤的、淫秽的、暴力的及任何违反国家法律法规政策的内容；&lt;br&gt;    4.5.10 用户不得利用本“软件”传送或散布以其他方式实现传送含有受到知识产权法律保护的图像、相片、软件或其他资料的文件，作为举例（但不限于此）：包括版权或商标法（或隐私权或公开权），除非用户拥有或控制着相应的权利或已得到所有必要的认可；&lt;br&gt;    4.5.11 用户不得以任何不合法的方式、为任何不合法的目的、或以任何与本协议不一致的方式使用本“软件”和“冠尔信息”提供的其他服务；&lt;br&gt;    4.5.12 用户若违反上述规定，“冠尔信息”有权采取终止、完全或部分中止、限制用户软件的使用功能。&lt;br&gt;    4.6 从非“冠尔信息”指定站点下载的本“软件”以及从非“冠尔信息”发行的介质上获得的本“软件”，“冠尔信息”无法保证该“软件”是否感染计算机病毒、是否隐藏有伪装的特洛伊木马程序或者黑客软件，使用此类软件，将可能导致不可预测的风险，建议用户不要轻易下载、安装、使用，由此产生的一切法律责任与纠纷一概与“冠尔信息”无关。  &lt;/p&gt;
-&lt;h2 id=&quot;5-隐私权保护&quot;&gt;&lt;a href=&quot;#5-隐私权保护&quot; class=&quot;headerlink&quot; title=&quot;5 隐私权保护&quot;&gt;&lt;/a&gt;5 隐私权保护&lt;/h2&gt;&lt;p&gt;5.1 本“软件”不含有任何旨在破坏用户计算机数据和获取用户隐私信息的恶意代码。&lt;br&gt;5.2 本“软件”不会收集用户使用其它软件、文档等个人信息，不会泄漏用户隐私。&lt;br&gt;5.3 为了更好地改进软件和服务，用户点击本“软件”功能按钮时，“软件”会记录用户操作行为，在不透漏单个用户隐私资料的前提下，“冠尔信息”有权对全部用户操作行为数据库进行分析，并对用户操作行为数据进行商业上的利用。  &lt;/p&gt;
-&lt;h2 id=&quot;6-免责与责任限制&quot;&gt;&lt;a href=&quot;#6-免责与责任限制&quot; class=&quot;headerlink&quot; title=&quot;6 免责与责任限制&quot;&gt;&lt;/a&gt;6 免责与责任限制&lt;/h2&gt;&lt;p&gt;6.1 本“软件”经过详细的测试，但不能保证与所有的软硬件系统完全兼容，不能保证本“软件”完全没有错误。如果出现不兼容及“软件”错误的情况，用户可拨打技术支持电话将情况报告“冠尔信息”，以获得技术支持。如果无法解决兼容性问题，用户可以删除本“软件”。&lt;br&gt;6.2 在适用法律允许的最大范围内，对因使用或不能使用本“软件”所产生的损害及风险，包括但不限于直接或间接的个人损害、商业赢利的丧失、贸易中断、商业信息的丢失或任何其它经济损失，“冠尔信息”不承担任何责任。&lt;br&gt;6.3 对于因电信系统或互联网网络故障、计算机故障或病毒、信息损坏或丢失、计算机系统问题或其它任何不可抗力原因而产生损失，“冠尔信息”不承担任何责任。&lt;br&gt;6.4 用户违反本协议规定，对“冠尔信息”造成损害的。“冠尔信息”有权采取包括但不限于中断使用许可、停止提供服务、限制使用、法律追究等措施。  &lt;/p&gt;
-&lt;h2 id=&quot;7-法律及争议解决&quot;&gt;&lt;a href=&quot;#7-法律及争议解决&quot; class=&quot;headerlink&quot; title=&quot;7 法律及争议解决&quot;&gt;&lt;/a&gt;7 法律及争议解决&lt;/h2&gt;&lt;p&gt;7.1 本协议适用中华人民共和国法律。&lt;br&gt;7.2 因本协议引起的或与本协议有关的任何争议，各方应友好协商解决；协商不成的，任何一方均可将有关争议提交至厦门仲裁委员会，并按照其届时有效的仲裁规则仲裁；仲裁裁决是终局的，对各方均有约束力。&lt;/p&gt;
-&lt;h2 id=&quot;8-其他条款&quot;&gt;&lt;a href=&quot;#8-其他条款&quot; class=&quot;headerlink&quot; title=&quot;8 其他条款&quot;&gt;&lt;/a&gt;8 其他条款&lt;/h2&gt;&lt;p&gt;8.1 如果本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，或违反任何适用的法律，则该条款被视为删除，但本协议的其余条款仍有效并且具有约束力。&lt;br&gt;8.2 “冠尔信息”有权随时根据有关法律、法规的变化以及公司经营状况和经营策略的调整等修改本协议。修改后的协议会在“冠尔信息”（&lt;a href=&quot;http://www.geit.com.cn）上公布，并随附于新版本软件。当发生有关争议时，以最新的协议文本为准。如果不同意改动的内容，用户可以自行删除本“软件”。如果用户继续使用本“软件”，则视为您接受本协议的变动。&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.geit.com.cn）上公布，并随附于新版本软件。当发生有关争议时，以最新的协议文本为准。如果不同意改动的内容，用户可以自行删除本“软件”。如果用户继续使用本“软件”，则视为您接受本协议的变动。&lt;/a&gt;&lt;br&gt;8.3 本协议的一切解释权与修改权归“冠尔信息”。&lt;br&gt;至此，您已经详细阅读并已理解本协议，并同意严格遵守各条款和条件。如果您对本《协议》有任何疑问或者希望从厦门冠尔信息科技有限公司获得任何信息，请按下列地址和方式与厦门冠尔信息科技有限公司联系。&lt;br&gt;厦门冠尔信息科技有限公司&lt;br&gt;福建省厦门市湖里区火炬东路11号厦门创业园创业大厦2楼&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;UBoardmate软件最终用户授权和许可协议&quot;&gt;&lt;a href=&quot;#UBoardmate软件最终用户授权和许可协议&quot; class=&quot;headerlink&quot; title=&quot;UBoardmate软件最终用户授权和许可协议&quot;&gt;&lt;/a&gt;UBoardmate软件最终用户授
     
     </summary>
     
