@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://amroll.github.io/2019/04/10/testgit/</loc>
+    
+    <lastmod>2019-04-10T06:37:29.416Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://amroll.github.io/2019/04/10/testhexo/</loc>
     
     <lastmod>2019-04-10T06:00:59.160Z</lastmod>

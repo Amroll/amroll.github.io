@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amroll.github.io/"/>
-  <updated>2019-04-10T06:00:59.160Z</updated>
+  <updated>2019-04-10T06:37:29.416Z</updated>
   <id>http://amroll.github.io/</id>
   
   <author>
@@ -14,6 +14,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>testgit</title>
+    <link href="http://amroll.github.io/2019/04/10/testgit/"/>
+    <id>http://amroll.github.io/2019/04/10/testgit/</id>
+    <published>2019-04-10T06:37:29.000Z</published>
+    <updated>2019-04-10T06:37:29.416Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>testhexo</title>
