@@ -2,27 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://amroll.github.io/testpage/index.html</loc>
-    
-    <lastmod>2019-04-10T06:51:50.402Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://amroll.github.io/2019/04/10/testgit/</loc>
-    
-    <lastmod>2019-04-10T06:37:29.416Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://amroll.github.io/2019/04/10/testhexo/</loc>
-    
-    <lastmod>2019-04-10T06:00:59.160Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://amroll.github.io/2018/03/29/CSharp/CS%E5%A7%94%E6%89%98/</loc>
     
     <lastmod>2018-03-29T07:51:19.350Z</lastmod>
