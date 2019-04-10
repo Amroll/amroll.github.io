@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>关于&amp;帮助 | 炎木的博客</title>
+  <title>Csharp委托 | 炎木的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="欢迎来到我的泥塘Hello World!  介绍部分以后慢慢填  
-恩，先这样挺好这个是超链接">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于&帮助">
-<meta property="og:url" content="http://amroll.github.io/about/index.html">
+  <meta name="description" content="委托委托的定义委托是指定义了指定特定方法签名的类型，示例如下：
+123456789101112131415public class Program&amp;#123;    public delegate string Reverse(string s);        public static ReverseString(string s)    &amp;#123;        return new st">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Csharp委托">
+<meta property="og:url" content="http://amroll.github.io/2018/03/29/CSharp/CS委托/index.html">
 <meta property="og:site_name" content="炎木的博客">
-<meta property="og:description" content="欢迎来到我的泥塘Hello World!  介绍部分以后慢慢填  
-恩，先这样挺好这个是超链接">
-<meta property="og:updated_time" content="2016-06-17T08:16:36.773Z">
+<meta property="og:description" content="委托委托的定义委托是指定义了指定特定方法签名的类型，示例如下：
+123456789101112131415public class Program&amp;#123;    public delegate string Reverse(string s);        public static ReverseString(string s)    &amp;#123;        return new st">
+<meta property="og:updated_time" content="2018-03-29T07:51:19.350Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于&帮助">
-<meta name="twitter:description" content="欢迎来到我的泥塘Hello World!  介绍部分以后慢慢填  
-恩，先这样挺好这个是超链接">
+<meta name="twitter:title" content="Csharp委托">
+<meta name="twitter:description" content="委托委托的定义委托是指定义了指定特定方法签名的类型，示例如下：
+123456789101112131415public class Program&amp;#123;    public delegate string Reverse(string s);        public static ReverseString(string s)    &amp;#123;        return new st">
   
     <link rel="alternative" href="/atom.xml" title="炎木的博客" type="application/atom+xml">
   
@@ -165,11 +165,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-CSharp/CS委托" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/about/index.html" class="article-date">
-  	<time datetime="2016-06-14T05:46:19.000Z" itemprop="datePublished">2016-06-14</time>
+      <a href="/2018/03/29/CSharp/CS委托/" class="article-date">
+  	<time datetime="2018-03-29T02:50:00.000Z" itemprop="datePublished">2018-03-29</time>
 </a>
     </div>
   
@@ -182,7 +182,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      关于&amp;帮助
+      Csharp委托
     </h1>
   
 
@@ -198,15 +198,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="欢迎来到我的泥塘"><a href="#欢迎来到我的泥塘" class="headerlink" title="欢迎来到我的泥塘"></a>欢迎来到我的泥塘</h1><p>Hello World!<br><div class="alert alert-success"><i class="fa fa-lightbulb-o"></i>  介绍部分以后慢慢填</div>  </p>
-<p>恩，先这样挺好<br><a href="http://baidu.com" target="_blank" rel="external"><span class="label label-default">这个是超链接</span></a></p>
-
+        <h1 id="委托"><a href="#委托" class="headerlink" title="委托"></a>委托</h1><h2 id="委托的定义"><a href="#委托的定义" class="headerlink" title="委托的定义"></a>委托的定义</h2><p>委托是指定义了指定特定方法签名的类型，示例如下：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">delegate</span> <span class="keyword">string</span> <span class="title">Reverse</span>(<span class="params"><span class="keyword">string</span> s</span>)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="title">ReverseString</span>(<span class="params"><span class="keyword">string</span> s</span>)</span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">string</span>(s.Reverse().ToArray());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span><br><span class="line">    </span>&#123;</span><br><span class="line">        Reverse rev=ReverseString;</span><br><span class="line">        Console.WriteLine(rev(<span class="string">"a string"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="NET自带的委托类型"><a href="#NET自带的委托类型" class="headerlink" title=".NET自带的委托类型"></a>.NET自带的委托类型</h2><p>分别是<code>Action&lt;&gt;</code>,<code>Func&lt;&gt;</code>,<code>Predicate&lt;&gt;</code>.</p>
+<ul>
+<li><code>Action&lt;&gt;</code> 用于需要使用委托参数执行操作的情况。</li>
+<li><code>Func&lt;&gt;</code> 用于现有转换的情况，也就是说需要将委托参数转换为其他结果时。</li>
+<li><code>Predicate&lt;&gt;</code> 用于需要确定参数是否满足委托条件的情况。也可以写作<code>Func&lt;T,bool&gt;</code>。</li>
+</ul>
+<h2 id="匿名委托"><a href="#匿名委托" class="headerlink" title="匿名委托"></a>匿名委托</h2><h2 id="Lambda"><a href="#Lambda" class="headerlink" title="Lambda"></a>Lambda</h2>
       
     </div>
     
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2018/03/29/CSharp/CS异步/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          csharp异步编程模式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/07/MVC/Html_Helpers/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
@@ -224,7 +249,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"关于&帮助　| 炎木的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Csharp委托　| 炎木的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -236,7 +261,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="undefined" data-title="关于&amp;帮助" data-url="http://amroll.github.io/about/index.html"></div>
+	<div class="ds-thread" data-thread-key="CSharp/CS委托" data-title="Csharp委托" data-url="http://amroll.github.io/2018/03/29/CSharp/CS委托/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -280,7 +305,7 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

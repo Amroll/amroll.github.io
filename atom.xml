@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://amroll.github.io/"/>
-  <updated>2017-01-05T09:44:21.802Z</updated>
+  <updated>2019-04-10T06:00:59.160Z</updated>
   <id>http://amroll.github.io/</id>
   
   <author>
@@ -14,6 +14,90 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>testhexo</title>
+    <link href="http://amroll.github.io/2019/04/10/testhexo/"/>
+    <id>http://amroll.github.io/2019/04/10/testhexo/</id>
+    <published>2019-04-10T06:00:59.000Z</published>
+    <updated>2019-04-10T06:00:59.160Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>csharp异步编程模式</title>
+    <link href="http://amroll.github.io/2018/03/29/CSharp/CS%E5%BC%82%E6%AD%A5/"/>
+    <id>http://amroll.github.io/2018/03/29/CSharp/CS异步/</id>
+    <published>2018-03-29T03:10:15.636Z</published>
+    <updated>2018-03-29T07:51:18.427Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;C-异步编程&quot;&gt;&lt;a href=&quot;#C-异步编程&quot; class=&quot;headerlink&quot; title=&quot;C#异步编程&quot;&gt;&lt;/a&gt;C#异步编程&lt;/h1&gt;&lt;h2 id=&quot;异步操作模式&quot;&gt;&lt;a href=&quot;#异步操作模式&quot; class=&quot;headerlink&quot; title=&quot;异步操作模式&quot;&gt;&lt;/a&gt;异步操作模式&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;TAP 基于任务的异步模式&lt;/li&gt;
+&lt;li&gt;EAP 基于事件的异步模式&lt;/li&gt;
+&lt;li&gt;APM 异步编程模型（IAsyncResult模式）&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;C-异步编程&quot;&gt;&lt;a href=&quot;#C-异步编程&quot; class=&quot;headerlink&quot; title=&quot;C#异步编程&quot;&gt;&lt;/a&gt;C#异步编程&lt;/h1&gt;&lt;h2 id=&quot;异步操作模式&quot;&gt;&lt;a href=&quot;#异步操作模式&quot; class=&quot;headerlink&quot; titl
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Csharp委托</title>
+    <link href="http://amroll.github.io/2018/03/29/CSharp/CS%E5%A7%94%E6%89%98/"/>
+    <id>http://amroll.github.io/2018/03/29/CSharp/CS委托/</id>
+    <published>2018-03-29T02:50:00.000Z</published>
+    <updated>2018-03-29T07:51:19.350Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;委托&quot;&gt;&lt;a href=&quot;#委托&quot; class=&quot;headerlink&quot; title=&quot;委托&quot;&gt;&lt;/a&gt;委托&lt;/h1&gt;&lt;h2 id=&quot;委托的定义&quot;&gt;&lt;a href=&quot;#委托的定义&quot; class=&quot;headerlink&quot; title=&quot;委托的定义&quot;&gt;&lt;/a&gt;委托的定义&lt;/h2&gt;&lt;p&gt;委托是指定义了指定特定方法签名的类型，示例如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight cs&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Program&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;delegate&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Reverse&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt; s&lt;/span&gt;)&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ReverseString&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt; s&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt;(s.Reverse().ToArray());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt;[] args&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Reverse rev=ReverseString;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Console.WriteLine(rev(&lt;span class=&quot;string&quot;&gt;&quot;a string&quot;&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;NET自带的委托类型&quot;&gt;&lt;a href=&quot;#NET自带的委托类型&quot; class=&quot;headerlink&quot; title=&quot;.NET自带的委托类型&quot;&gt;&lt;/a&gt;.NET自带的委托类型&lt;/h2&gt;&lt;p&gt;分别是&lt;code&gt;Action&amp;lt;&amp;gt;&lt;/code&gt;,&lt;code&gt;Func&amp;lt;&amp;gt;&lt;/code&gt;,&lt;code&gt;Predicate&amp;lt;&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Action&amp;lt;&amp;gt;&lt;/code&gt; 用于需要使用委托参数执行操作的情况。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Func&amp;lt;&amp;gt;&lt;/code&gt; 用于现有转换的情况，也就是说需要将委托参数转换为其他结果时。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Predicate&amp;lt;&amp;gt;&lt;/code&gt; 用于需要确定参数是否满足委托条件的情况。也可以写作&lt;code&gt;Func&amp;lt;T,bool&amp;gt;&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;匿名委托&quot;&gt;&lt;a href=&quot;#匿名委托&quot; class=&quot;headerlink&quot; title=&quot;匿名委托&quot;&gt;&lt;/a&gt;匿名委托&lt;/h2&gt;&lt;h2 id=&quot;Lambda&quot;&gt;&lt;a href=&quot;#Lambda&quot; class=&quot;headerlink&quot; title=&quot;Lambda&quot;&gt;&lt;/a&gt;Lambda&lt;/h2&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;委托&quot;&gt;&lt;a href=&quot;#委托&quot; class=&quot;headerlink&quot; title=&quot;委托&quot;&gt;&lt;/a&gt;委托&lt;/h1&gt;&lt;h2 id=&quot;委托的定义&quot;&gt;&lt;a href=&quot;#委托的定义&quot; class=&quot;headerlink&quot; title=&quot;委托的定义&quot;&gt;&lt;/a&gt;委托的定
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://amroll.github.io/2018/02/07/MVC/Html_Helpers/"/>
+    <id>http://amroll.github.io/2018/02/07/MVC/Html_Helpers/</id>
+    <published>2018-02-07T08:42:58.308Z</published>
+    <updated>2018-02-07T08:44:22.354Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;学习心得&quot;&gt;&lt;a href=&quot;#学习心得&quot; class=&quot;headerlink&quot; title=&quot;学习心得&quot;&gt;&lt;/a&gt;学习心得&lt;/h1&gt;&lt;p&gt;The difference between calling the HtmlHelper methods and using an html tags is that the HtmlHelper method is designed to make it easy to bind to view data or model data.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;学习心得&quot;&gt;&lt;a href=&quot;#学习心得&quot; class=&quot;headerlink&quot; title=&quot;学习心得&quot;&gt;&lt;/a&gt;学习心得&lt;/h1&gt;&lt;p&gt;The difference between calling the HtmlHelper methods and usin
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>NSIS插件开发(1)</title>

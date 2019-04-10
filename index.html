@@ -163,6 +163,209 @@
 
       <div class="body-wrap">
   
+    <article id="post-testhexo" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/04/10/testhexo/" class="article-date">
+  	<time datetime="2019-04-10T06:00:59.000Z" itemprop="datePublished">2019-04-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/10/testhexo/">testhexo</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-CSharp/CS异步" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/03/29/CSharp/CS异步/" class="article-date">
+  	<time datetime="2018-03-29T03:10:15.636Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/29/CSharp/CS异步/">csharp异步编程模式</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="C-异步编程"><a href="#C-异步编程" class="headerlink" title="C#异步编程"></a>C#异步编程</h1><h2 id="异步操作模式"><a href="#异步操作模式" class="headerlink" title="异步操作模式"></a>异步操作模式</h2><ul>
+<li>TAP 基于任务的异步模式</li>
+<li>EAP 基于事件的异步模式</li>
+<li>APM 异步编程模型（IAsyncResult模式）</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-CSharp/CS委托" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/03/29/CSharp/CS委托/" class="article-date">
+  	<time datetime="2018-03-29T02:50:00.000Z" itemprop="datePublished">2018-03-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/29/CSharp/CS委托/">Csharp委托</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="委托"><a href="#委托" class="headerlink" title="委托"></a>委托</h1><h2 id="委托的定义"><a href="#委托的定义" class="headerlink" title="委托的定义"></a>委托的定义</h2><p>委托是指定义了指定特定方法签名的类型，示例如下：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">delegate</span> <span class="keyword">string</span> <span class="title">Reverse</span>(<span class="params"><span class="keyword">string</span> s</span>)</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="title">ReverseString</span>(<span class="params"><span class="keyword">string</span> s</span>)</span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">string</span>(s.Reverse().ToArray());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span><br><span class="line">    </span>&#123;</span><br><span class="line">        Reverse rev=ReverseString;</span><br><span class="line">        Console.WriteLine(rev(<span class="string">"a string"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="NET自带的委托类型"><a href="#NET自带的委托类型" class="headerlink" title=".NET自带的委托类型"></a>.NET自带的委托类型</h2><p>分别是<code>Action&lt;&gt;</code>,<code>Func&lt;&gt;</code>,<code>Predicate&lt;&gt;</code>.</p>
+<ul>
+<li><code>Action&lt;&gt;</code> 用于需要使用委托参数执行操作的情况。</li>
+<li><code>Func&lt;&gt;</code> 用于现有转换的情况，也就是说需要将委托参数转换为其他结果时。</li>
+<li><code>Predicate&lt;&gt;</code> 用于需要确定参数是否满足委托条件的情况。也可以写作<code>Func&lt;T,bool&gt;</code>。</li>
+</ul>
+<h2 id="匿名委托"><a href="#匿名委托" class="headerlink" title="匿名委托"></a>匿名委托</h2><h2 id="Lambda"><a href="#Lambda" class="headerlink" title="Lambda"></a>Lambda</h2>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-MVC/Html_Helpers" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/02/07/MVC/Html_Helpers/" class="article-date">
+  	<time datetime="2018-02-07T08:42:58.308Z" itemprop="datePublished">2018-02-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="学习心得"><a href="#学习心得" class="headerlink" title="学习心得"></a>学习心得</h1><p>The difference between calling the HtmlHelper methods and using an html tags is that the HtmlHelper method is designed to make it easy to bind to view data or model data.</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-NSIS插件开发" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -514,73 +717,17 @@
 
 
   
-    <article id="post-TEST" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2016/06/14/TEST/" class="article-date">
-  	<time datetime="2016-06-14T03:26:19.000Z" itemprop="datePublished">2016-06-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/14/TEST/">开篇</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h1><p>老早就想建一个基于Github Pages的博客了，一直没有行动。最近研究FFMpeg多了，天天上Github上找相关开源，找烦了就又回想到要建一博客记录一点东西。于是这个博客就被建了起来。</p>
-<h1 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h1><p>。。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/随笔/">随笔</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Amroll
+    		&copy; 2019 Amroll
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
